@@ -47,6 +47,28 @@ export const OrderInnerScreen: FC = ({ route }: any) => {
         ))}
 
         {/*<View style={styles.hr} />*/}
+
+        <View style={styles.commentsContainer}>
+          <Text style={styles.text_h1}>Комментарий</Text>
+        </View>
+
+        <View style={styles.provideContainer}>
+          <View style={styles.provide}>
+            <Text style={styles.provide_text}>ПОСТАВЩИК</Text>
+          </View>
+          <Text style={styles.text_h1}>Мартин Урал</Text>
+          <Text style={styles.text}>Russia, Tyumen</Text>
+          <Text style={styles.text}>Телефон: +9199489474</Text>
+        </View>
+
+        <View style={styles.provideContainer}>
+          <View style={styles.provide}>
+            <Text style={styles.provide_text}>МАГАЗИН</Text>
+          </View>
+          <Text style={styles.text_h1}>Shop11111</Text>
+          <Text style={styles.text}>Erevan, Armenia</Text>
+          <Text style={styles.text}>Телефон: +9199489474</Text>
+        </View>
       </ScrollView>
     </View>
   ) : (
@@ -61,6 +83,7 @@ const colors = {
   white: 'white',
   borderColor: '#d1d1d1',
   background: '#f1f1f1',
+  red: 'red',
 }
 
 const styles = StyleSheet.create({
@@ -75,9 +98,47 @@ const styles = StyleSheet.create({
     padding: 5,
     ...customStyles.border(1, 'solid', colors.borderColor),
   },
+  commentsContainer: {
+    borderRadius: 5,
+    margin: 10,
+    minHeight: 100,
+    padding: 5,
+    ...customStyles.border(1, 'solid', colors.borderColor),
+  },
   hr: {
     ...customStyles.border(1, 'solid', colors.borderColor),
     marginVertical: 5,
+  },
+  provide: {
+    backgroundColor: colors.red,
+    borderRadius: 3,
+    height: 20,
+    marginHorizontal: 210,
+    width: 135,
+  },
+  provideContainer: {
+    borderRadius: 5,
+    margin: 10,
+    minHeight: 150,
+    padding: 10,
+    ...customStyles.border(1, 'solid', colors.borderColor),
+  },
+  provide_text: {
+    color: colors.white,
+    fontSize: 14,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  text: {
+    fontSize: 15,
+    marginHorizontal: 10,
+    marginVertical: 10,
+  },
+  text_h1: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    marginHorizontal: 10,
+    marginVertical: 10,
   },
   text_h2: {
     fontSize: 25,
